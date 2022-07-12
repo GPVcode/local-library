@@ -1,0 +1,47 @@
+
+/* Center our header and set font family*/
+header{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: large;
+    height: 100%;
+
+}
+
+
+/* Make font consistent and add some space from center image and text */
+main{
+    font-family: Helvetica, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+}
+
+
+/* Center footer text with black background and white text */
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: auto;
+}
+
+/* Center our image and set backgroud color to black */
+.image-container {
+    text-align: center;
+    background-color: black;
+
+}
+
+/* make our text more aesthetic with spacing */
+article, .intro, .contact-me{
+    margin: 0 auto;
+    width: 90%;
+    font-size: large;
+}
+
+a:hover{
+    color: deepskyblue;
+    font-size:large;
+}
