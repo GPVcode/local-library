@@ -11,13 +11,49 @@
 <body>
     <!-- this is my header where I highlight my name and professional role.-->
     <header> 
-        <h1>Gabriel Villaruel</h1>
-        <h2>Software Engineer</h2>
+        <h1 class="myName">Gabriel Villaruel</h1>
+        <h2 class="myRole">Software Engineer</h2>
     </header>
     <!-- create a div container for our center image. -->
-    <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80" alt="silhouette">
-        </div>
+    <div class="clock">
+        <p class="time" id="timerField">12:10:45 AM</p>
+    </div>
+    <script>
+        let timerPlace = document.querySelector("#timerField");
+        let morningOrEvening = "";
+
+        function timer() {
+            let date = new Date();
+
+            let seconds = date.getSeconds();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+
+            // is it AM or PM?
+            if(hours >= 12) {
+                morningOrEvening = "PM";
+            } else {
+                morningOrEvening = "AM";
+            }
+
+            // normalize to the 12 hour clock
+            if (hours > 12) {
+                hours -= 12;
+            }
+
+            // make sure second and minutes are two digits
+            let paddedSeconds = String(seconds).padStart(2, "0");
+            let paddedMinutes = String(minutes).padStart(2, "0");
+
+            // Use template literals to get string output
+            timerField.textContent = `${hours}:${paddedMinutes}:${paddedSeconds} ${morningOrEvening}`;       
+            
+            // use a timer function looping via requestAnimationFrame to ensure our timer gets called sixty times a second to ensure our time values update in near real-time
+            requestAnimationFrame(timer);
+        }
+        //invoke our function
+        timer();
+    </script>
     <!-- in the main section I intend to use an image of either myself or something meaningful to me -->
     <main>
         <!-- I am putting the intro into a class called intro because I may want to design this later -->

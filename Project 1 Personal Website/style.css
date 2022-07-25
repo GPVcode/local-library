@@ -1,17 +1,26 @@
 
 /* Center our header and set font family*/
 header{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Allan", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     font-size: large;
     height: 100%;
 
 }
 
+.myRole, .myName{
+    font-size: 50px;
+    background: -webkit-linear-gradient(rgb(0, 0, 0) 70%, rgb(83, 249, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 40px;
+}
+
+  
 
 /* Make font consistent and add some space from center image and text */
 main{
-    font-family: Helvetica, sans-serif;
+    font-family: "Allan", Helvetica, sans-serif;
     padding-top: 20px;
     padding-bottom: 20px;
     height: 100%;
@@ -38,11 +47,35 @@ footer {
 /* make our text more aesthetic with spacing */
 article, .intro, .contact-me{
     margin: 0 auto;
-    width: 90%;
+    width: 50%;
     font-size: large;
+    
 }
 
 a:hover{
     color: deepskyblue;
     font-size:large;
 }
+
+.clock {
+    display: grid;
+    place-content: center;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+
+}
+
+#timerField {
+    font-size: 50px;
+    font-family: "Allan", monospace;
+    /* background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 75%,
+    #919191 100%,
+    #ffffff 10%); */
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
